@@ -1,0 +1,149 @@
+/* TextClassifier.css */
+
+/* General styling for the whole component */
+.text-classifier {
+  background: linear-gradient(to right, #fbc2eb, #a6c0fe); /* Gradient background */
+  color: #333; /* Text color */
+  font-family: Arial, sans-serif; /* Font style */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  max-width: 100%; /* Full width */
+  margin: 0 auto;
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* Header styling */
+.text-classifier h1 {
+  text-align: center;
+  color: #4a4a4a;
+  margin-bottom: 20px;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+textarea {
+  width: 100%;
+  max-width: 100%; /* Ensure textarea takes full width */
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  resize: vertical;
+  margin-bottom: 20px;
+  box-sizing: border-box; /* Include padding and border in textarea's total width and height */
+}
+
+/* Button styling */
+button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Results section styling */
+.results {
+  margin-top: 20px;
+  width: 100%; /* Ensure results section takes full width */
+}
+
+.result-columns {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%; /* Full width */
+  box-sizing: border-box; /* Include padding and border in columns' total width and height */
+}
+
+.result-column {
+  background: white;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  flex: 1;
+  min-width: 300px; /* Adjusted for better layout */
+  max-width: 100%;
+  box-sizing: border-box; /* Include padding and border in columns' total width and height */
+}
+
+h2 {
+  text-align: center;
+  color: #4a4a4a;
+}
+
+.result-column h3 {
+  text-align: center;
+  padding: 10px 0;
+  margin: 0;
+}
+
+.positive {
+  color: #4caf50;
+}
+
+.neutral {
+  color: #2196f3;
+}
+
+.negative {
+  color: #f44336;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .result-columns {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* TextClassifier.css */
+
+/* Existing styles... */
+
+/* Loading indicator styling */
+.loading {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.loading p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #4a4a4a;
+}
+
+/* Optional: You can replace the text with an actual loading icon */
+.loading::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: 3px solid #ddd;
+  border-top: 3px solid #4caf50;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-right: 10px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
